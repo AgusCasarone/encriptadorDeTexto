@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Encriptador</title>
+</head>
+
+<body class="light" id="theme">
+    <header id="header">
+        <nav>
+            <div class="navbar-logo">
+                <a href="#title"><img src="/Alura.svg" alt="Logo de Alura" class="navbar-logo" id="logo"></a>
+            </div>
+            <div class="navbar-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-nav-item">
+                        <div class="modo">Modo</div>
+                        <span>
+                            <div class="flipswitch">
+                                <input type="checkbox"  onclick="modoClaroOscuro()" name="flipswitch" class="flipswitch-cb" id="fs" checked>
+                                <label class="flipswitch-label" for="fs">
+                                    <div class="flipswitch-inner"></div>
+                                    <div class="flipswitch-switch"></div>
+                                </label>
+                            </div>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="light" id="theme">
+            Encriptá tu texto.
+        </h1>
+        <div class="ingreso">
+            <textarea class="form-control-textarea" placeholder="Ingresá tu texto aquí." id="story"></textarea>
+            <div class="warning">
+                <img src="/Alerta.svg" alt="Advertencia" id="alerta"><p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="input-buttons">
+                <button class="form-control-button button-encriptar" id="btn-encriptar" onclick="encriptar()">Encriptar</button>
+                <button class="form-control-button button-desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="resultado">
+            <div id="resultado">
+                <img src="/Muñeco.svg" alt="Persona buscando con una lupa." id="result-background">
+                <h2 class="results-title">Ningún elemento fue encontrado</h2>
+                <p class="results-description">Ingresa el texto que desees encriptar o desencriptar en la sección sobre los botones.</p>
+            </div>
+            <button class="form-control-button button-copiar" id="button-copiar" onclick="copiar()">Copiar</button>
+        </div>
+    </main>    
+    <footer>
+            <div class="footer-box" id="contact">
+                <h3>¿Quién hizo esto?</h3>
+                <ul class="footer-box__items">
+                    <li class="github--btn"><a href="https://github.com/AgusCasarone" target="_blank"><img src="/github-icon.svg" alt="Link al perfil de GitHub de AgusCasarone" id="footer-btn"></a></li>
+                    <li class="mail--btn"><a href="mailto:agus.casarone@gmail.com"><img src="/google-gmail.svg" alt="Link al mail agus.casarone@gmail.com" id="footer-btn"></a></li>
+                    <li class="linkedin--btn"><a href="https://www.linkedin.com/in/agustina-casarone/" target="_blank"><img src="/linkedin-icon.svg" alt="Link al perfil de LinkedIn de Agustina Casarone" id="footer-btn"></a></li>
+                </ul>
+            </div>
+    </footer>
+    <script src="/index.js"></script>
+</body>
+</html>

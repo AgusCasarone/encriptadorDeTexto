@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    border-radius: 50px;
+}
+
+.dark {
+    background-color: #0A3871;
+    color: #F3F5FC;
+}
+
+
+.light {    
+    background-color: #F3F5FC;
+    color: #0A3871;
+}
+
+body {
+    width: 375px;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid #000;
+}
+
+/* ================================================================= */
+/* NAV BAR */
+
+nav {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    background-color: rgba(243,245,252,0.45);
+    border-radius: 50px;
+    box-shadow: 0px 0px 38px 5px rgba(243,245,252,1);
+    -webkit-box-shadow: 0px 0px 38px 5px rgba(243,245,252,1);
+    -moz-box-shadow: 0px 0px 38px 5px rgba(243,245,252,1);
+}
+
+.modo{
+    text-align: center;
+}
+
+.navbar-item {
+    justify-content:center;
+    display: flex;
+    flex-direction: row;
+}
+
+.flipswitch {
+    position: relative;
+    width: 95px;
+}
+
+.flipswitch input[type=checkbox] {
+    display: none;
+}
+
+.flipswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #999999;
+    border-radius: 50px;
+}
+
+.flipswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.flipswitch-inner:before, .flipswitch-inner:after {
+    float: left;
+    width: 50%;
+    height: 24px;
+    padding: 0;
+    line-height: 24px;
+    font-size: 16px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.flipswitch-inner:before {
+    content: "Claro";
+    padding-left: 12px;
+    background-color: #12C42F;
+    color: #FFFFFF;
+}
+
+.flipswitch-inner:after {
+    content: "Oscuro";
+    padding-right: 12px;
+    background-color: #EBEBEB;
+    color: #888888;
+    text-align: right;
+}
+
+.flipswitch-switch {
+    width: 20px;
+    margin: 2px;
+    background: #FFFFFF;
+    border: 1px solid #999999;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 69px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
+    margin-left: 0;
+}
+
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
+    right: 0;
+}
+
+
+/* ================================================================= */
+/* MAIN */
+main {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #0A3871;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+}
+
+ /* ================================================================= */
+/* INPUTS */
+
+.ingreso {
+    text-align: center;
+    text-justify: center;
+    resize: none;
+}
+
+textarea {
+    border: none;
+    background-color: #F3F5FC;
+    height: 8rem;
+    width: 100%;
+    resize: none;
+    color: #0A3871;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 150%;
+    text-align: center;
+    text-justify: center;
+}
+
+textarea::placeholder {
+    color: #0A3871;
+    font-size: 1.4rem;
+    text-align: center;
+    text-justify: center;
+    padding: 1rem 0;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: #F3F5FC;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #249de4;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+textarea:active {
+    border: none;
+}
+
+.warning {
+    font-size: 0.75rem;
+    height: 0.75rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+#alerta {
+    height: 0.75rem;
+    margin-right: 0.5rem;
+}
+
+.input-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-control-button{
+    font-family: 'Inter', sans-serif;
+    border: none;
+}
+
+.form-control-button:hover {
+    box-shadow: 2.5px 2.5px 15px 5px rgba(23,93,134,0.4) inset;
+    -webkit-box-shadow: 2.5px 2.5px 15px 5px rgba(23,93,134,0.4) inset;
+    -moz-box-shadow: 2.5px 2.5px 15px 5px rgba(23,93,134,0.4) inset;
+}
+
+.form-control-button:active {
+    box-shadow: 0px 0px 17px 4px rgba(23,93,134,0.65) inset;
+    -webkit-box-shadow: 0px 0px 17px 4px rgba(23,93,134,0.65) inset;
+    -moz-box-shadow: 0px 0px 17px 4px rgba(23,93,134,0.65) inset;
+}
+
+.form-control-button {
+    width: 21.4375rem;
+    height: 4.1875rem;
+    margin: 0.75rem 0;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.button-encriptar {
+    background-color: #0A3871;
+    color: #fff;
+}
+
+.button-desencriptar {
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    background: #F3F5FC;
+}
+
+
+ /* ================================================================= */
+/* OUTPUTS */
+
+.resultado {
+    text-align: center;
+    text-justify: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 2rem;
+    color: #495057;
+    padding: 1.5rem;
+    width: 21.4375rem;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 2rem;
+    margin: 3.25rem 0;
+    line-break: auto;
+    word-break: break-word;
+
+}
+
+#resultado {
+    background: #FFFFFF;
+
+}
+
+#result-background {
+    background: #FFFFFF;
+    display: none;
+}
+
+.button-copiar {
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    background: #FFFFFF;
+    width: 100%;
+    visibility: hidden;
+}
+
+.results-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: #FFFFFF;
+    line-height: 120%;
+    color: #343A40;
+    margin-bottom: 1rem;
+}
+
+.results-description {
+    font-style: normal;
+    background: #FFFFFF;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+
+/* ================================================================= */
+/* FOOTER */
+
+footer {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;    
+    width: 100%;
+    line-height: 1.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-box__items {
+    display: flex;
+    flex-direction: row;
+    height: 1.5rem;
+    justify-content: space-around;
+}
+
+#footer-btn {
+    height: 1.5rem;
+}
+
