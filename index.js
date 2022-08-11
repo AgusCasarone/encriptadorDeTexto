@@ -86,11 +86,6 @@ function desencriptar() {
 /* MODO CLARO / OSCURO */
 
 function modoClaroOscuro() {
-    if (activateLightTheme.className != "dark") {
-        activateLightTheme.className = "dark";
-    }
-    else {
-        activateLightTheme.className = "light";
-    }
-    console.log('modoClaroOscuro')
+    document.querySelector("body").classList.toggle("dark");    
+    /* crear un div azul con transition: all 0.3s ease-in 0s; para hacer más smooth el cambio */
 }
