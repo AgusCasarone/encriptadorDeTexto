@@ -4,27 +4,6 @@
     border-radius: 50px;
 }
 
-.dark {
-    background-color: #0A3871;
-    color: #F3F5FC;
-}
-
-.dark h1 {
-    background-color: #0A3871;
-    color: #F3F5FC;
-}
-
-.dark text {
-    background-color: #0A3871;
-    color: #F3F5FC;
-}
-
-
-.light {    
-    background-color: #F3F5FC;
-    color: #0A3871;
-}
-
 body {
     width: 375px;
     margin: auto;
@@ -94,15 +73,15 @@ nav {
 .flipswitch-inner:before {
     content: "Claro";
     padding-left: 12px;
-    background-color: #12C42F;
+    background-color: #0A3871;
     color: #FFFFFF;
 }
 
 .flipswitch-inner:after {
     content: "Oscuro";
     padding-right: 12px;
-    background-color: #EBEBEB;
-    color: #888888;
+    background-color: #ffffff64;
+    color: #0A3871;
     text-align: right;
 }
 
@@ -280,7 +259,7 @@ textarea:active {
 
 #resultado {
     background: #FFFFFF;
-
+    padding: 0.5rem;
 }
 
 #result-background {
@@ -339,3 +318,51 @@ footer {
     height: 1.5rem;
 }
 
+
+/* ================================================================= */
+/* MODO OSCURO */
+
+.dark {
+    background-color: #0A3871;
+    color: #F3F5FC;
+}
+
+.dark h1 {
+    background-color: #0A3871;
+    color: #F3F5FC;
+}
+
+.dark text {
+    background-color: #0A3871;
+    color: #F3F5FC;
+}
+
+.dark nav {
+    background-color: #ffffff64;
+}
+
+.dark textarea {
+    background-color: #ffffff64;
+}
+
+.dark button {
+    background-color: #ffffff64;
+}
+.dark .desencriptar {
+    background-color: #ffffff64;
+    color: red;
+}
+
+.dark h2 {
+    background-color: #ffffff2e;
+    color: #172e84;
+}
+
+
+.light {    
+    background-color: #F3F5FC;
+    color: #0A3871;
+}
+
+/* ========================================================================= */
+/* QUERY TABLET */
