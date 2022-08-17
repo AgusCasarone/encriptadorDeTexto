@@ -5,9 +5,9 @@
 }
 
 body {
-    width: 375px;
+    width: 100vw;
     margin: auto;
-    padding: 1rem;
+    background: #F3F5FC;
     border: 1px solid #000;
 }
 
@@ -22,6 +22,7 @@ nav {
     padding: 0.5rem 1rem;
     justify-content: space-between;
     align-items: center;
+    width: 95%;
 }
 
 .modo{
@@ -119,7 +120,7 @@ main {
 h1 {
     font-size: 2rem;
     color: #0A3871;
-    margin: 1.5rem 0;
+    margin: 2vw 0;
     padding: 1.5rem;
 }
 
@@ -130,12 +131,13 @@ h1 {
     text-align: center;
     text-justify: center;
     resize: none;
+    width: 95%
 }
 
 textarea {
     border: none;
-    background-color: #F3F5FC;
-    height: 8rem;
+    background-color: #cdd5f13c;
+    height: 50vw;
     width: 100%;
     resize: none;
     color: #0A3871;
@@ -143,14 +145,12 @@ textarea {
     font-size: 1.5rem;
     line-height: 150%;
     text-align: center;
-    text-justify: center;
+    max-height: 10rem;
 }
 
 textarea::placeholder {
     color: #0A3871;
     font-size: 1.4rem;
-    text-align: center;
-    text-justify: center;
     padding: 1rem 0;
 }
 
@@ -174,16 +174,12 @@ textarea::-webkit-scrollbar-thumb {
     -o-border-radius: 10px;
 }
 
-textarea:active {
-    border: none;
-}
-
 .warning {
     font-size: 0.75rem;
     height: 0.75rem;
-    margin: 1rem 0;
+    margin: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 #alerta {
@@ -247,14 +243,14 @@ textarea:active {
     font-size: 2rem;
     color: #495057;
     padding: 1.5rem;
-    width: 21.4375rem;
+    width: 95%;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 2rem;
     margin: 3.25rem 0;
     line-break: auto;
+    resize: none;
     word-break: break-word;
-
 }
 
 #resultado {
@@ -366,3 +362,28 @@ footer {
 
 /* ========================================================================= */
 /* QUERY TABLET */
+
+@media (min-width: 376px) and (max-width: 768px) {
+    body {
+        padding: 2.5rem;
+        width: 100vw;
+    }
+
+
+    .input-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .form-control-button {
+        margin: 0 .75rem;
+        width: 40vw;
+    }
+
+    .button-copiar {
+        width: 100%;
+    }
+}
